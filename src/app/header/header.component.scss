@@ -4,7 +4,7 @@
   align-items: end;
   padding: 1rem 4rem;
   flex-flow: row wrap;
-  margin-top: 48px;
+  margin-top: 2rem;
 
   @media only screen and (max-width: 600px) {
     padding: 1rem 2rem;
@@ -27,13 +27,13 @@
 
     li {
       list-style: none;
-      margin-right: 48px;
+      margin-right: 2rem;
       cursor: pointer;
       outline: none;
-      border-bottom: 3px solid transparent;
+      border-bottom: 0.1rem solid transparent;
 
       &.active {
-        border-bottom: 3px solid #000;
+        border-bottom: 0.1rem solid #000;
       }
     }
 
@@ -65,7 +65,7 @@
       list-style: none;
       font-weight: 700;
       font-size: 2rem;
-      margin-bottom: 24px;
+      margin-bottom: 2rem;
     }
   }
 }

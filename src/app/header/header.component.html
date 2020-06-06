@@ -5,10 +5,10 @@
 <nav *ngIf="!isMobile">
   <li [routerLink]="'/home'" [routerLinkActive]="'active'">Home</li>
   <li [routerLink]="'/about'" [routerLinkActive]="'active'">About</li>
-  <app-button>Get a quote</app-button>
+  <app-button [routerLink]="'/quote'">Get a quote</app-button>
 </nav>
 
-<button *ngIf="isMobile" class="hamburger hamburger--spin" [ngClass]="{'is-active': menuIsOpen}" type="button"
+<button *ngIf="isMobile" class="hamburger hamburger--elastic" [ngClass]="{'is-active': menuIsOpen}" type="button"
   (click)="toggleMenu()">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
@@ -18,5 +18,5 @@
 <div class="overlay" *ngIf="menuIsOpen">
   <li [routerLink]="'/home'">Home</li>
   <li [routerLink]="'/about'">About</li>
-  <li>Get a quote</li>
+  <li [routerLink]="'/quote'">Get a quote</li>
 </div>

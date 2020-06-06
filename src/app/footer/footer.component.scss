@@ -1,21 +1,50 @@
 :host {
   background: #EEE;
-  padding: 32px;
+  padding: 1.2rem;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
 
-  ::ng-deep > .section {
-    margin-top: 24px;
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 
-    h2 {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
+    @media only screen and (max-width: 600px) {
+      flex-flow: column nowrap;
+      justify-content: flex-start;
     }
 
-    p {
-      font-size: 0.7rem;
-      margin-bottom: 0.4rem;
+    &.attribution {
+      vertical-align: middle;
+      padding: 1.2rem;
+    }
+
+    ::ng-deep > .section {
+      padding: 1.2rem;
+
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 0.7rem;
+
+        a {
+          text-decoration: none;
+          font-weight: 700;
+
+          &.facebook {
+            color: #3B5998;
+          }
+
+          &.instagram {
+            color: #F56040;
+          }
+        }
+      }
     }
   }
 }

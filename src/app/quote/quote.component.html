@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<section>
+  <div class="container">
+    <h2>Get a quote</h2>
+    <h3>
+      You can use the form below to get in touch with us for a quote</h3>
+  </div>
+
+  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+    <label>Full name</label>
+    <input name="Full Name" type="text" formControlName="fullName" />
+
+    <label>Email</label>
+    <input name="Email" type="email" formControlName="email" />
+
+    <label>Phone number</label>
+    <input name="Phone Number" type="number" formControlName="phoneNumber" />
+
+    <label>Your message</label>
+    <textarea name="Message" formControlName="message"></textarea>
+
+    <button type="submit" [disabled]="contactForm.invalid">Get Quote</button>
+    <strong *ngIf="messageSent">Your message was recieved. We will get back to you within 24 hours</strong>
+  </form>
+</section>
+
+<app-footer></app-footer>

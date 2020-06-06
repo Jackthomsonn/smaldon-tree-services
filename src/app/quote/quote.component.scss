@@ -59,6 +59,59 @@
         }
       }
     }
+
+    & > form {
+      display: flex;
+      justify-content: flex-start;
+      flex-flow: column wrap;
+      width: 50vw;
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: 600px) {
+        width: 90vw;
+      }
+
+      label {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      input, textarea {
+        border: 1px solid #EEE;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        outline: none;
+        resize: none;
+      }
+
+      textarea {
+        min-height: 10rem;
+      }
+
+      button {
+        display: flex;
+        padding: 2rem;
+        color: #FFF;
+        background-color: #000;
+        border-color: #000;
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        &:disabled {
+          opacity: 0.2;
+        }
+      }
+
+      strong {
+        margin-top: 24px;
+        font-weight: 300;
+      }
+    }
   }
 
   app-footer {

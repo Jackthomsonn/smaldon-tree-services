@@ -4,11 +4,12 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
+import { QuoteComponent } from './quote/quote.component';
 import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [ {
   path: '',
-  component: HomeComponent
+  redirectTo: '/home'
 }, {
   path: 'home',
   component: HomeComponent
@@ -28,6 +29,9 @@ const routes: Routes = [ {
     imageUrl: undefined,
     imageUrl2: undefined,
   }
+}, {
+  path: 'quote',
+  component: QuoteComponent
 } ];
 
 @NgModule({
