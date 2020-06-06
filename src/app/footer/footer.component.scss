@@ -1,0 +1,21 @@
+:host {
+  background: #EEE;
+  padding: 32px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  ::ng-deep > .section {
+    margin-top: 24px;
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+}

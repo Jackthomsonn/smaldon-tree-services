@@ -1,0 +1,22 @@
+<div class="logo">
+  <img src="../../assets/logo.png" width="auto" height="160" [routerLink]="'/home'" />
+</div>
+
+<nav *ngIf="!isMobile">
+  <li [routerLink]="'/home'" [routerLinkActive]="'active'">Home</li>
+  <li [routerLink]="'/about'" [routerLinkActive]="'active'">About</li>
+  <app-button>Get a quote</app-button>
+</nav>
+
+<button *ngIf="isMobile" class="hamburger hamburger--spin" [ngClass]="{'is-active': menuIsOpen}" type="button"
+  (click)="toggleMenu()">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
+<div class="overlay" *ngIf="menuIsOpen">
+  <li [routerLink]="'/home'">Home</li>
+  <li [routerLink]="'/about'">About</li>
+  <li>Get a quote</li>
+</div>
